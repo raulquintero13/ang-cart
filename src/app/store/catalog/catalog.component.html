@@ -1,0 +1,26 @@
+<div class="container-fluid fixed">
+<br><br>
+    <table class="table table-striped table-bordered table-hover" *ngIf="hayRegistros(); else sinarticulos">
+        <thead>
+        <tr>
+            <td scope="col">Codigo</td>
+            <td scope="col">Imagen</td>
+            <td scope="col">Descripcion</td>
+            <td scope="col" coslpan="2">Precio</td>
+            <td scope="col"></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let art of articulos">
+            <th scope="row">{{ art.codigo }}</th>
+            <td><img alt="" src="./assets/images/noimage.png"></td>
+            <td>{{ art.descripcion }}</td>
+            <td>{{ art.precio }}</td>
+            <td><button class="btn btn-secondary" >Comprar</button></td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #sinarticulos>
+    <p>No hay articulos</p>
+</ng-template>
+</div>
