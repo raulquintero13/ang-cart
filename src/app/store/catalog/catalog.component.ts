@@ -10,7 +10,7 @@ export class CatalogComponent {
   articulos: any;
 
   constructor(){
-    this. articulos = localStorage.getItem("articulos");
+    this.articulos = localStorage.getItem("articulos");
     this.articulos = JSON.parse(this.articulos);
 
   }
@@ -18,5 +18,5 @@ export class CatalogComponent {
   hayRegistros() {
     return this.articulos.length > 0;
   }
-  
+
 }

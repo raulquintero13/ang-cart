@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CartComponent{
 
+  db: any;
+
   art = {
     codigo:0 ,
     descripcion: "",
@@ -22,7 +24,16 @@ export class CartComponent{
   ]
 
   constructor(){
-    localStorage.setItem("articulos", JSON.stringify(this.articulos) )
+
+    this.db = localStorage.getItem('articulos');
+    this.db = JSON.parse(this.db);
+
+    if(this.db.length == 0)
+      localStorage.setItem("articulos", JSON.stringify(this.articulos) )
+    else{
+      this.db = localStorage.getItem("articulos");
+      this.articulos = JSON.parse(this.db);
+    }
 
   }
   hayRegistros() {
