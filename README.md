@@ -3,9 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
 ## ScreenShots
-(https://raulquintero13.github.io/ang-cart/assets/images/preview01.png)
+![Preview](https://raulquintero13.github.io/ang-cart/assets/images/preview01.png)
 
-(https://raulquintero13.github.io/ang-cart/assets/images/preview02.png)
+![Preview](https://raulquintero13.github.io/ang-cart/assets/images/preview02.png)
 
 ## Tarea
 Confeccionar una aplicación que permita administrar un vector de objetos que almacena en cada elemento el código, descripción, imagen y precio de un artículo. Se debe poder agregar, borrar y modificar los datos de un artículo.
