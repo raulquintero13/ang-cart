@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CartComponent{
 
+
   db: any;
 
   art = {
@@ -24,7 +25,6 @@ export class CartComponent{
   ]
 
   constructor(){
-
     this.db = localStorage.getItem('articulos');
     this.db = JSON.parse(this.db);
 
@@ -65,7 +65,8 @@ export class CartComponent{
     this.articulos.push({codigo:this.art.codigo,
       descripcion:this.art.descripcion,
       precio:this.art.precio});
-    
+    //  ^?
+     
     localStorage.setItem("articulos", JSON.stringify(this.articulos) )
     this.art.codigo = 0;
     this.art.descripcion="";
@@ -84,7 +85,6 @@ export class CartComponent{
       this.articulos[x].descripcion = this.art.descripcion;
       this.articulos[x].precio = this.art.precio;
       localStorage.setItem("articulos", JSON.stringify(this.articulos) )
-
       return
     }
     alert('No existe el codigo de articulo ingresado')
